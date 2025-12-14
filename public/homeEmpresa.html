@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WW SAFE | Painel da Empresa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="assets/css/homeEmpresa.css">
+</head>
+<body>
+
+<!-- HEADER ESTILO CADASTRO -->
+<header class="header-empresa">
+  <div class="header-container">
+
+    <div class="logo-area">
+      <img src="assets/images/logo.png" alt="WWSafe Logo">
+    </div>
+
+    <div class="empresa-info">
+      <span id="nomeEmpresaHeader" class="nome-empresa">Nome da Empresa</span>
+      <span id="nomeFuncionarioHeader" class="nome-funcionario">Funcionário Logado</span>
+    </div>
+
+ <div class="header-actions">
+  <a
+        id="btnCadastroUsuarioEmpresa"
+        href="#"
+        class="btn-logout btn-secundario"
+      >
+        Cadastrar Usuário
+      </a>
+
+  <button id="btnLogout" class="btn-logout">
+    Sair
+  </button>
+</div>
+
+
+
+
+  </div>
+</header>
+
+
+<!-- CONTEÚDO -->
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>
+      Bem-vinda ao painel empresarial.<br>
+      Gerencie suas vagas, perfil e acompanhe o desempenho da sua empresa com segurança.
+    </h1>
+
+    <div class="hero-actions">
+      <a href="vagasIndex.html" class="hero-btn pink">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828925.png">
+        Cadastrar Nova Vaga
+      </a>
+
+      <a href="dashboard.html" class="hero-btn outline">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+        Ver Dashboard
+      </a>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards">
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+      <h3>Perfil da Empresa</h3>
+      <p>Edite informações, atualize a foto e visualize dados da empresa.</p>
+      <a href="perfil_empresas.html">Acessar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2936/2936631.png">
+      <h3>Gerenciar Vagas</h3>
+      <p>Cadastre novas vagas ou edite oportunidades existentes.</p>
+      <a href="vagasLista.html">Acessar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+      <h3>Dashboard</h3>
+      <p>Acompanhe métricas, avaliações e denúncias da empresa.</p>
+      <a href="dashboard.html">Acessar</a>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="assets/js/homeEmpresa.js"></script>
+</body>
+</html>

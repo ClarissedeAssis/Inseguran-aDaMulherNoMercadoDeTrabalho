@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WWSafe - Registrar Denúncia</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <style>
+
+    :root {
+      --pink1: #ff4a7a;
+      --pink2: #e91e63;
+      --gray-light: #f5f5f7;
+      --gray-border: #d9d9d9;
+    }
+
+ body {
+  background: #fafafa;
+  margin: 0;
+  color: #222;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .card-header {
+      background: linear-gradient(90deg, var(--pink1), var(--pink2));
+      padding: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-title h1 {
+      text-align: center;
+      margin: 20px 0 30px 0;
+      font-size: 28px;
+      font-weight: 800;
+      color: #333;
+    }
+
+    /* ---------------- FORMULÁRIO ---------------- */
+
+    .linha-topo {
+      display: grid;
+      grid-template-columns: 1fr 180px 1fr;
+      gap: 20px;
+      margin-bottom: 25px;
+      align-items: end;
+    }
+
+    .field label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--gray-border);
+      background: var(--gray-light);
+      transition: 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      background: #fff;
+      border-color: var(--pink2);
+      box-shadow: 0 0 0 3px rgba(233,30,99,0.2);
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    /* Container moderno */
+.tipo-denuncia-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Cada card */
+.denuncia-opcao {
+  flex: 1;
+  cursor: pointer;
+}
+
+.denuncia-opcao input {
+  display: none;
+}
+
+/* Visual do card */
+.denuncia-card-visual {
+  background: #fff;
+  border: 2px solid #d8d8d8;
+  padding: 18px;
+  text-align: center;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #444;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Hover bonito */
+.denuncia-card-visual:hover {
+  background: #ffe8f0;
+  border-color: var(--pink2);
+  transform: translateY(-2px);
+}
+
+/* Selecionado */
+.denuncia-opcao input:checked + .denuncia-card-visual {
+  border-color: var(--pink2);
+  background: #ffd3e2;
+  color: var(--pink2);
+  box-shadow: 0 4px 10px rgba(233,30,99,0.25);
+}
+
+
+    /* -------- BOTÃO BUSCAR EMPRESA -------- */
+
+    .btn-buscar {
+      background: linear-gradient(180deg, var(--pink1), var(--pink2));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      padding: 12px 12px;
+      width: 100%;
+      transition: 0.2s;
+    }
+
+    .btn-buscar:hover {
+      opacity: 0.85;
+    }
+
+    /* -------- UPLOAD MODERNO -------- */
+
+    #uploadBox {
+      border: 2px dashed var(--pink2);
+      border-radius: 14px;
+      padding: 25px;
+      text-align: center;
+      background: #fff0f5;
+      color: #444;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #uploadBox:hover {
+      background: #ffe4ee;
+    }
+
+    #previewFile {
+      margin-top: 12px;
+      max-width: 230px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    /* -------- BOTÕES FINAIS -------- */
+
+  .form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* joga um botão para cada lado */
+  align-items: center;
+  width: 100%;
+}
+
+    .btn-voltar, .btn-cadastrar {
+      padding: 12px 30px;
+      border-radius: 12px !important;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-cadastrar {
+      background: linear-gradient(180deg, var(--pink1), var(--pink2));
+      color: white;
+    }
+
+    .btn-voltar {
+      background: #ccc;
+      color: #333;
+    }
+
+    /* ---------------- LISTA DE DENÚNCIAS ---------------- */
+
+    .card-denuncia {
+      margin-top: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+      transition: 0.2s;
+    }
+
+    .card-denuncia:hover {
+      transform: translateY(-3px);
+    }
+
+    .card-top {
+      background: linear-gradient(90deg, var(--pink1), var(--pink2));
+      padding: 12px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .card-body-den {
+      padding: 20px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .provas-box img {
+      max-width: 160px;
+      border-radius: 12px;
+      margin-top: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .page-title h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* fonte do cadastro */
+  font-weight: 700;  /* menos pesado que 800/900 */
+  font-size: 30px;   /* igual ao cadastro */
+  color: #222;       /* mesma cor do cadastro */
+  margin: 0 0 26px 0; 
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+
+<div class="card" role="region">
+
+  <div class="card-header">
+    <img src="assets/images/logo.png" alt="WWSafe Logo" height="48" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="page-title">
+      <h1>Registrar Denúncia</h1>
+    </div>
+
+    <form id="denunciaForm">
+
+      <div class="linha-topo">
+        <div class="field">
+          <label>CNPJ da Empresa:</label>
+          <input type="text" id="cnpj" placeholder="00.000.000/0000-00" />
+        </div>
+
+        <button type="button" id="btnBuscar" class="btn-buscar">Buscar</button>
+
+        <div class="field">
+          <label>Empresa Encontrada:</label>
+          <input type="text" id="empresaNome" readonly placeholder="Nenhuma empresa" />
+        </div>
+      </div>
+
+      <div class="form-grid">
+
+        <div class="coluna">
+          <div class="field">
+            <label>Tipo de Problema:</label>
+            <select id="tipoProblema">
+              <option disabled selected>Selecione</option>
+              <option>Assédio verbal</option>
+              <option>Assédio moral</option>
+              <option>Discriminação</option>
+              <option>Violência física</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Data e Local:</label>
+            <input type="text" id="dataLocal" placeholder="12/03/2025 - sala 2" />
+          </div>
+        </div>
+
+        <div class="coluna">
+          <div class="field">
+            <label>Descrição:</label>
+            <textarea id="descricao"></textarea>
+          </div>
+
+<div class="field">
+  <label>Tipo de Denúncia:</label>
+
+  <div class="tipo-denuncia-container">
+
+    <label class="denuncia-opcao">
+      <input type="radio" name="tipoDenuncia" value="anonima" checked>
+      <div class="denuncia-card-visual">
+        <i class="bi bi-incognito" style="font-size: 28px;"></i>
+        <span>Anônima</span>
+      </div>
+    </label>
+
+    <label class="denuncia-opcao">
+      <input type="radio" name="tipoDenuncia" value="contato">
+      <div class="denuncia-card-visual">
+        <i class="bi bi-person-badge" style="font-size: 28px;"></i>
+        <span>Contato Seguro</span>
+      </div>
+    </label>
+
+  </div>
+
+  <div id="campoNome" style="margin-top: 10px;"></div>
+</div>
+
+        </div>
+
+        <div class="coluna">
+          <div class="field">
+  <label>Evidência:</label>
+
+  <div id="uploadBox">
+    <i class="bi bi-upload" style="font-size:28px;color:var(--pink2);"></i>
+    <p id="uploadText">Clique ou arraste o arquivo</p>
+
+    <input 
+      type="file" 
+      id="evidencia" 
+      accept="image/*,video/*,application/pdf" 
+      style="display:none;"
+    />
+
+    <!-- PREVIEW AGORA DENTRO DO UPLOADBOX -->
+    <img id="previewFile">
+  </div>
+</div>
+
+        </div>
+
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-voltar" onclick="history.back()">Voltar</button>
+        <button type="submit" class="btn-cadastrar">Registrar</button>
+      </div>
+
+    </form>
+
+    <hr class="my-4">
+
+    <h3>Denúncias Recentes</h3>
+    <div id="listaDenuncias"></div>
+
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+  <a href="todasDenuncias.html" class="btn-cadastrar" style="text-decoration:none; padding:12px 25px; display:inline-block;">
+    Ver todas as denúncias
+  </a>
+</div>
+</div>
+
+<script src="assets/js/denuncia.js"></script>
+
+<script>
+const uploadBox = document.getElementById("uploadBox");
+const fileInput = document.getElementById("evidencia");
+const preview = document.getElementById("previewFile");
+
+uploadBox.addEventListener("click", () => fileInput.click());
+
+fileInput.addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  if (file.type.startsWith("image")) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      preview.src = reader.result;
+      preview.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  } else {
+    preview.style.display = "none";
+  }
+});
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+:root {
+  --pink1: #ff6b81;
+  --pink2: #ff2d6f;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --text: #222;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+.app-header {
+  height: 72px;
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.info-logada {
+  text-align: right;
+  color: white;
+}
+
+.info-logada .empresa {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.info-logada .usuario {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 32px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,.1);
+  transition: .2s;
+}
+
+.hero-btn img {
+  width: 32px;
+}
+
+.hero-btn.pink {
+  background: linear-gradient(180deg, var(--pink1), var(--pink2));
+  color: white;
+}
+
+.hero-btn.outline {
+  border: 2px solid var(--pink2);
+  color: var(--pink2);
+  background: white;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.07);
+  text-align: center;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 90px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card a {
+  display: inline-block;
+  background: var(--pink2);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+/* ===============================
+   HEADER – PADRÃO CADASTRO
+=============================== */
+
+.header-empresa {
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(90deg, #ff6b81, #ff2d6f);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LOGO GRANDE (IGUAL AO CADASTRO) */
+.logo-area img {
+  height: 140px;           /* 🔥 mesmo tamanho do cadastro */
+  object-fit: contain;
+  padding: 6px;
+}
+
+/* NOME EMPRESA + FUNCIONÁRIO */
+.empresa-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 1.1;
+}
+
+.nome-empresa {
+  font-size: 22px;        /* 🔥 maior e mais forte */
+  font-weight: 800;
+}
+
+.nome-funcionario {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.btn-logout {
+  margin-left: auto; /* empurra para a direita */
+  padding: 10px 20px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #ededed;
+  color: #222;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+  transition: all 0.15s ease;
+}
+
+.btn-logout:hover {
+  transform: translateY(-1px);
+  background: #d9d9d9;
+}
+
+/* HEADER – AÇÕES PÚBLICAS */
+.acoes-publicas {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+}
+
+.btn-header {
+  padding: 10px 18px;
+  border-radius: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  background: white;
+  color: #ff2d6f;
+}
+
+.btn-header.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* ESCONDER LOGOUT NA PÁGINA PÚBLICA */
+body.publica .btn-logout {
+  display: none;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}

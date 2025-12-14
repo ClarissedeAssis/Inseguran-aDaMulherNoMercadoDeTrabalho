@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WW SAFE | Homepage</title>
+  <link rel="stylesheet" href="assets/css/homeEmpresa.css"> <!-- mesmo CSS do homeEmpresa -->
+</head>
+<body>
+<header class="header-empresa">
+  <div class="header-container">
+
+    <div class="logo-area">
+      <img src="assets/images/logo.png" alt="WWSafe Logo">
+    </div>
+
+    <div class="empresa-info">
+      <span class="nome-empresa">WW SAFE</span>
+      <span class="nome-funcionario" id="usuarioLogado">Carregando usuário...</span>
+    </div>
+
+    <button id="btnLogout" class="btn-logout">Sair</button>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>
+      Conectando mulheres a empresas seguras, afinal toda mulher merece trabalhar com respeito.
+    </h1>
+
+    <div class="hero-actions">
+      <a href="perfil.html" class="hero-btn pink">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828925.png">
+        Meu Perfil
+      </a>
+
+      <a href="avaliar.html" class="hero-btn outline">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+        Avaliar Empresa
+      </a>
+    </div>
+  </section>
+
+  <!-- CARDS DE DESTAQUE -->
+  <section class="cards">
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/4751/4751982.png" alt="Ranking Empresa">
+      </div>
+      <h3>Melhor empresa do ranking</h3>
+      <p id="rankingDesc">Carregando...</p>
+      <a href="ranking.html" class="vermais">Ver +</a>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZ-d3InAso3S85WZ0Le3awSPx9KxafqFziBvm2Hm1oFMsFNzUkmLpnvG61HMeMy4C8rQ&usqp=CAU" alt="Última Vaga">
+      </div>
+      <h3>Última vaga cadastrada</h3>
+      <p id="vagaDesc">Carregando...</p>
+      <a href="visualizarVagas.html" class="vermais">Ver +</a>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/5499/5499860.png" alt="Última Denúncia">
+      </div>
+      <h3>Última denúncia registrada</h3>
+      <p id="denunciaDesc">Carregando...</p>
+      <a href="registrarDenuncia.html" class="vermais">Ver +</a>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="assets/js/homepage.js"></script>
+<script>
+  // Pega o objeto do usuário logado
+  const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
+  const usuarioLogado = usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : null;
+
+  // Atualiza o nome no header
+  const nomeUsuario = usuarioLogado ? usuarioLogado.nome : 'Visitante';
+  document.getElementById('usuarioLogado').innerText = nomeUsuario;
+
+  // Carregar dados nos cards
+  document.getElementById('rankingDesc').innerText = "Carregando melhor empresa...";
+  document.getElementById('vagaDesc').innerText = "Carregando última vaga...";
+  document.getElementById('denunciaDesc').innerText = "Carregando última denúncia...";
+
+  // LOGOUT
+  document.getElementById('btnLogout').addEventListener('click', () => {
+    // Remove usuário logado do localStorage
+    localStorage.removeItem('usuarioLogado');
+    // Redireciona para a página de login
+    window.location.href = 'loginUsuario.html';
+  });
+</script>
+
+
+
+</body>
+</html>

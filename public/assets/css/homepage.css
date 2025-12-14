@@ -1,0 +1,263 @@
+:root {
+  --pink1: #ff6b81;
+  --pink2: #ff2d6f;
+  --light-gray: #f2f2f2;
+  --input-border: #d9d9d9;
+  --text: #222;
+  --white: #ffffff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: var(--text);
+}
+
+/* ------------------------------ */
+/* HEADER FIXO FINO + LOGO PEQUENA */
+/* ------------------------------ */
+
+/* HEADER FIXO – AGORA UM POUCO MAIOR */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 65px; /* antes 55px — agora maior */
+  background: linear-gradient(90deg, var(--pink2), var(--pink1));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px; 
+  z-index: 2000;
+}
+
+/* LOGO ACOMPANHA O NOVO TAMANHO */
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100% !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+/* MENU COM MAIS ESPAÇAMENTO ENTRE AS PALAVRAS */
+.menu {
+  display: flex;
+  gap: 35px; /* antes ~18px — agora bem mais separado */
+}
+
+
+/* MENU COM TAMANHO UM POUCO MAIOR */
+.menu a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 17px; /* antes 15px — leve aumento */
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+  opacity: 0.75;
+}
+
+/* Ajuste para o conteúdo não subir */
+.hero {
+  margin-top: 75px; /* aumentei para acompanhar o header */
+}
+
+
+/* ------------------------------ */
+/* HERO */
+/* ------------------------------ */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #dcdcdc;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.hero h1 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ------------------------------ */
+/* BOTÕES */
+/* ------------------------------ */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+.menu-btn {
+  background: transparent;   /* remove o fundo branco */
+  border: 2px solid white;   /* borda elegante */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.btn {
+  padding: 18px 35px;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.07);
+}
+
+.btn-pink {
+  background: linear-gradient(180deg, var(--pink1), var(--pink2));
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff2d6f41;
+  color: var(--pink2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ------------------------------ */
+/* SEÇÃO EM DESTAQUE */
+/* ------------------------------ */
+
+.section-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 30px 0 15px;
+  padding-left: 40px;
+  color: #3b3b3b;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 40px 60px;
+}
+
+/* CARD PADRÃO */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  border: 1px solid #ededed;
+  text-align: left;
+}
+
+/* RANKING MAIOR */
+.card-ranking {
+  width: 360px;
+  height: 230px;
+}
+
+/* AVALIAÇÕES + DENÚNCIAS */
+.card-small {
+  width: 280px;
+  height: 200px;
+}
+
+.placeholder {
+  background: #efefef;
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.vermais {
+  float: right;
+  margin-top: 15px;
+  background: var(--pink2);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card-image {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* fundo neutro para imagens menores */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* agora mostra a imagem inteira */
+}
+
+/* ------------------------------ */
+/* RESPONSIVIDADE */
+/* ------------------------------ */
+
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+}
+

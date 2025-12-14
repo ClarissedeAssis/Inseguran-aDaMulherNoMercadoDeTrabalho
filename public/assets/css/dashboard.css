@@ -1,0 +1,135 @@
+:root{
+  --pink1:#ff6b81;
+  --pink2:#e91e63;
+  --light:#f7f7f7;
+  --border:#e6e6e6;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  width:100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.card {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 0;
+}
+
+
+.card-header{
+  background:linear-gradient(90deg,var(--pink1),var(--pink2));
+  height:80px;
+  display:flex;
+  align-items:center;
+  padding:0 24px;
+}
+
+.card-header img{
+  height:120px;
+}
+
+.card-body{
+  padding:30px 40px 40px;
+}
+
+.page-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.page-title h1{
+  font-weight:700;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.metric{
+  background:var(--light);
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+}
+
+.metric strong{
+  display:block;
+  font-size:28px;
+  color:var(--pink2);
+}
+
+.metric.destaque{
+  background:linear-gradient(180deg,#fff0f5,#ffe1eb);
+}
+
+.charts{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:24px;
+  margin-bottom:40px;
+}
+
+.chart-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+}
+
+.chart-card h3{
+  margin-bottom:16px;
+  color:var(--pink2);
+}
+
+.lists{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.list-card{
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+}
+
+.card-item{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:12px;
+}
+
+.card-item-top{
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+  color:var(--pink2);
+}
+
+.card-item-top.denuncia{
+  color:#c2185b;
+}
+.btn.btn-voltar{
+  min-width:170px;
+  padding:12px 28px;
+  border-radius:28px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+  background: linear-gradient(180deg, #ededed, #cfcfcf);
+  color:#222;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+  transition: all .15s ease;
+}
+
+.btn.btn-voltar:hover{
+  transform: translateY(-1px);
+}

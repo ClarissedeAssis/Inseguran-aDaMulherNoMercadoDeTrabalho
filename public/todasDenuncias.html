@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WWSafe - Todas as Denúncias</title>
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+
+:root {
+  --pink1: #ff4a7a;
+  --pink2: #e91e63;
+  --gray-light: #f5f5f7;
+  --gray-border: #d9d9d9;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+  padding: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.page-title h1 {
+  text-align: center;
+  margin: 20px 0 30px 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+}
+
+/* ----- Lista ----- */
+
+.card-denuncia {
+  margin-top: 18px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.card-denuncia:hover {
+  transform: translateY(-3px);
+}
+
+.card-top {
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.card-body-den {
+  padding: 20px;
+  color: #444;
+  font-size: 15px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.btn-voltar {
+  padding: 12px 30px;
+  border-radius: 12px !important;
+  font-weight: bold;
+  border: none;
+  background: #ccc;
+  color: #333;
+}
+
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="card-header">
+    <img src="assets/images/logo.png" alt="WWSafe Logo" height="48" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="page-title">
+      <h1>Todas as Denúncias</h1>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    </div>
+
+    <div id="listaTodas"></div>
+
+  </div>
+</div>
+
+<script src="assets/js/todasDenuncias.js"></script>
+
+</body>
+</html>

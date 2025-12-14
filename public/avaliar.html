@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WWSafe - Avaliações</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/avaliar.css">
+</head>
+
+<body>
+
+
+<header class="topbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="WWSafe Logo">
+  
+  </div>
+</header>
+ 
+</header>
+
+<div class="container my-4">
+
+  <div class="form-section card p-4">
+
+    <h1 class="titulo-pagina">Registrar Avaliação</h1>
+
+    <form id="avaliacaoForm">
+
+      <!-- EMPRESA / DATA / ASPECTO -->
+      <div class="linha-topo">
+
+        <div class="field">
+          <label>Empresa:</label>
+          <select id="empresaSelect" required></select>
+        </div>
+
+        <div class="field">
+          <label>Data da Experiência:</label>
+          <input type="date" id="dataAvaliacao" required>
+        </div>
+
+        <div class="field">
+          <label>Aspecto Avaliado:</label>
+          <select id="aspecto" required>
+            <option value="">Selecione</option>
+            <option>Atendimento</option>
+            <option>Ambiente de Trabalho</option>
+            <option>Segurança</option>
+            <option>Gestão</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- NOTA -->
+      <div class="field mb-3">
+        <label>Nota:</label>
+        <div class="stars" id="ratingStars">
+          <i data-value="1" class="bi bi-star"></i>
+          <i data-value="2" class="bi bi-star"></i>
+          <i data-value="3" class="bi bi-star"></i>
+          <i data-value="4" class="bi bi-star"></i>
+          <i data-value="5" class="bi bi-star"></i>
+        </div>
+        <input type="hidden" id="nota">
+      </div>
+
+      <!-- COMENTÁRIO -->
+      <div class="field mb-3">
+        <label>Comentário:</label>
+        <textarea id="comentario" placeholder="Descreva sua experiência..." required></textarea>
+      </div>
+
+      <!-- TIPO DE AVALIAÇÃO -->
+      <div class="field">
+        <label>Tipo de Avaliação:</label>
+
+        <div class="tipo-denuncia-container">
+
+          <label class="denuncia-opcao">
+            <input type="radio" name="tipoAvaliacao" value="anonima" checked>
+            <div class="denuncia-card-visual">
+              <i class="bi bi-incognito fs-2"></i>
+              <span>Anônima</span>
+            </div>
+          </label>
+
+          <label class="denuncia-opcao">
+            <input type="radio" name="tipoAvaliacao" value="normal">
+            <div class="denuncia-card-visual">
+              <i class="bi bi-person-badge fs-2"></i>
+              <span>Identificada</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- BOTÕES -->
+<div class="botoes-form">
+  <a href="homepage.html" class="btn-voltar">Voltar</a>
+  <button type="submit" class="btn-enviar">Enviar Avaliação</button>
+</div>
+
+    </form>
+
+  </div>
+
+  <!-- MINHAS AVALIAÇÕES -->
+  <div class="avaliacoes-section">
+    <h3>Minhas Avaliações</h3>
+    <div id="minhasAvaliacoes"></div>
+  </div>
+
+  <div class="area-todas-avaliacoes">
+  <a href="todasAvaliacoes.html" class="btn-todas">Todas Avaliações</a>
+</div>
+</div>
+
+<script src="assets/js/avaliar.js"></script>
+
+</body>
+</html>

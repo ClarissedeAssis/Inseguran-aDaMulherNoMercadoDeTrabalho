@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/perfil_empresas.css">
+</head>
+
+<body>
+
+<header class="card-header">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="empresa-mini">
+      <img id="fotoEmpresaMini">
+      <h3 id="nomeEmpresaMini"></h3>
+      <p id="emailEmpresaMini"></p>
+    </div>
+
+    <button class="menu ativo">Perfil</button>
+    <button class="menu sair" id="btnLogout">Sair</button>
+    <button class="btn btn-voltar" onclick="window.location.href='homeEmpresa.html'">Voltar</button>
+  </aside>
+
+  
+
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+
+    <!-- EMPRESA -->
+    <section class="card">
+      <h2>Empresa</h2>
+
+      <div class="topo">
+        <img id="fotoEmpresaGrande">
+        <button onclick="editarFotoEmpresa()">Editar foto</button>
+      </div>
+
+      <div class="grid">
+        <div><label>Nome</label><input id="empresa_nome"></div>
+        <div><label>Email</label><input id="empresa_email"></div>
+        <div><label>CNPJ</label><input id="empresa_cnpj"></div>
+        <div><label>Endereço</label><input id="empresa_endereco"></div>
+        <div><label>CEP</label><input id="empresa_cep"></div>
+        <div class="full"><label>Descrição</label><textarea id="empresa_descricao"></textarea></div>
+      </div>
+
+      <button onclick="salvarEmpresa()">Salvar empresa</button>
+    </section>
+
+    <!-- USUÁRIO -->
+    <section class="card">
+      <h2>Usuário da empresa</h2>
+
+      <div class="grid">
+        <div><label>Nome</label><input id="usuario_nome"></div>
+        <div><label>CPF</label><input id="usuario_cpf"></div>
+        <div><label>Cargo</label><input id="usuario_cargo"></div>
+        <div><label>Turno</label><input id="usuario_turno"></div>
+        <div><label>Senha</label><input id="usuario_senha" type="password"></div>
+      </div>
+
+      <button onclick="salvarUsuario()">Salvar usuário</button>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODAL UPLOAD -->
+<div class="modal-bg" id="modalFoto">
+  <div class="modal">
+    <h3>Alterar foto da empresa</h3>
+    <input type="file" id="inputFoto" accept="image/*">
+    <img id="previewFoto">
+    <div class="actions">
+      <button onclick="fecharModal()">Cancelar</button>
+      <button onclick="salvarFoto()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/perfil_empresa.js"></script>
+</body>
+</html>

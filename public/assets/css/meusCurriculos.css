@@ -1,0 +1,52 @@
+/* Layout lista + prévia */
+.curriculos-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Lista de currículos */
+.cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card individual do currículo */
+.curriculo-card {
+  padding: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curriculo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.curriculo-card h3 {
+  color: #093070;
+  margin-bottom: 8px;
+}
+
+.curriculo-card .status {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--pink2);
+}
+
+/* Prévia */
+.preview-card {
+  flex: 1;
+  min-height: 420px;
+  background: #fafafa;
+  padding: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .curriculos-layout {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,175 @@
+/* =========================
+   CURRÍCULO — PADRÃO DO SITE
+   ========================= */
+
+/* Container principal */
+.curriculo-card {
+  max-width: 1200px;
+  margin: 24px auto;
+}
+
+/* Header — reutiliza exatamente o do cadastro */
+.curriculo-card .card-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+}
+
+.curriculo-card .card-header img {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  padding: 6px;
+}
+
+/* Corpo */
+.curriculo-card .card-body {
+  padding: 28px 36px 40px;
+}
+
+/* Título */
+.curriculo-card .page-title {
+  text-align: center;
+  margin: 6px 0 26px;
+}
+
+.curriculo-card .page-title h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.curriculo-card .page-title p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* Formulário — mesmo padrão */
+.form-curriculo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-curriculo textarea {
+  grid-column: 1 / -1;
+}
+
+/* Campos */
+.form-curriculo .field {
+  width: 100%;
+}
+
+.form-curriculo label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.form-curriculo input,
+.form-curriculo select,
+.form-curriculo textarea {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 22px;
+  border: 1px solid var(--input-border);
+  background: var(--light-gray);
+  font-size: 14px;
+}
+
+.form-curriculo textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* Ações — exatamente igual */
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  gap: 20px;
+}
+
+/* Preview — simples, sem inventar */
+.preview-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* Responsivo — igual ao resto do site */
+@media (max-width: 920px) {
+  .curriculo-card {
+    width: calc(100% - 32px);
+  }
+
+  .form-curriculo {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+.card {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* HEADER ROSA */
+.card-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+}
+
+/* LOGO GRANDE */
+.card-header img {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* BOTÃO PADRÃO BONITO */
+.btn {
+  min-width: 140px;
+  padding: 10px 22px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+  background: linear-gradient(180deg, #ededed, #cfcfcf);
+  color: #222;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+}
+
+.btn-voltar:hover {
+  transform: translateY(-2px);
+}

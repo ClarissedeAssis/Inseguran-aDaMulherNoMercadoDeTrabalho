@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Vagas</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo">
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="page-title">
+        <h1>Cadastro de Vagas</h1>
+      </div>
+
+      <form id="jobForm" novalidate>
+        <input type="hidden" id="JobId">
+
+        <div class="form-grid">
+
+          <!-- Coluna 1 -->
+          <div class="coluna">
+            <div class="field">
+              <label for="Title">Título da Vaga:</label>
+              <input type="text" id="Title" required>
+            </div>
+
+            <div class="field">
+              <label for="Location">Local:</label>
+              <input type="text" id="Location" required>
+            </div>
+
+            <div class="field">
+              <label for="CategoriaSelect">Categoria:</label>
+              <select id="CategoriaSelect">
+                <option disabled selected>Selecione</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="marketing">Marketing</option>
+                <option value="rh">Recursos Humanos</option>
+                <option value="vendas">Vendas</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Coluna 2 -->
+          <div class="coluna">
+
+          <div class="field">
+  <label>Salário:</label>
+  <div class="salary-group">
+    <input type="number" id="SalaryMin" placeholder="Salário mínimo">
+    <input type="number" id="SalaryMax" placeholder="Salário máximo">
+  </div>
+</div>
+
+
+            <div class="field">
+              <label for="TipoContratoSelect">Tipo de Contrato:</label>
+              <select id="TipoContratoSelect">
+                <option disabled selected>Selecione</option>
+                <option value="clt">CLT</option>
+                <option value="pj">PJ</option>
+                <option value="temporario">Temporário</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="Description">Descrição:</label>
+              <textarea id="Description"></textarea>
+            </div>
+
+          </div>
+
+          <!-- Coluna 3 -->
+          <div class="coluna">
+
+            <div class="field">
+  <label>Requisitos:</label>
+
+  <div class="requirements-box">
+
+    <div class="requirements-input-area">
+      <input type="text" id="requirementInput" placeholder="Adicionar requisito">
+      <button type="button" class="btn-add-req" id="reqsButton">+</button>
+    </div>
+
+    <ul id="requirementsList" class="added-requirements"></ul>
+  </div>
+
+</div>
+
+
+          </div>
+
+          <!-- Ações -->
+          <div class="form-actions">
+            <button type="button" class="btn btn-voltar" onclick="window.location.href='homeEmpresa.html'">Voltar</button>
+            <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/cadastrarVagas.js"></script>
+</body>
+</html>

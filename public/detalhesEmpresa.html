@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WW SAFE | Detalhes da Empresa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/detalhesEmpresa.css">
+</head>
+<body>
+
+<!-- HEADER PADRÃO -->
+<header class="header-ranking">
+  <div class="logo-area">
+    <img src="assets/images/logo.png" alt="WW Safe Logo">
+    <button class="btn-voltar" onclick="voltarHome()">
+    Voltar
+    </button>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="empresa-detalhes">
+    <div class="empresa-info-principal">
+      <img id="fotoEmpresa" src="assets/images/logo.png" alt="Foto Empresa" class="empresa-foto">
+      <div class="empresa-texto">
+        <h1 id="tituloEmpresa">Nome da Empresa</h1>
+        <p id="descricaoEmpresa">Descrição da empresa...</p>
+        <p><strong>CNPJ:</strong> <span id="cnpjEmpresa"></span></p>
+        <p><strong>Setor:</strong> <span id="setorEmpresa"></span></p>
+        <p><strong>Avaliação Média:</strong> <span id="avaliacaoEmpresa"></span></p>
+        <p><strong>Quantidade de Avaliações:</strong> <span id="quantidadeAvaliacoes"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="avaliacoes-empresa">
+    <h2>Avaliações</h2>
+    <div id="listaAvaliacoes">
+      <!-- Avaliações da empresa serão renderizadas aqui -->
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/detalhesEmpresa.js"></script>
+<script>
+  function voltarHome() {
+    window.location.href = 'ranking.html';
+  }
+</script>
+</body>
+</html>

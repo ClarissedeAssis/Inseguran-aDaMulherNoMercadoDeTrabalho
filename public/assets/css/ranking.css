@@ -1,0 +1,181 @@
+:root {
+  --pink1: #ff6b81;
+  --pink2: #ff2d6f;
+  --light-gray: #f2f2f2;
+  --input-border: #d9d9d9;
+  --text: #222;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  color: var(--text);
+}
+
+/* HEADER PADRÃO */
+.header-ranking {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+  padding: 0 24px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-ranking .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-ranking img {
+  height: 110px;
+  width: auto;
+}
+
+.header-ranking h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* BUSCA */
+.buscar-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#buscar {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--light-gray);
+  font-size: 15px;
+}
+
+/* LISTA DE EMPRESAS */
+#ranking-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CARD DE EMPRESA */
+.ranking-item {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.ranking-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.ranking-foto {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.ranking-info {
+  flex: 1;
+}
+
+.ranking-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #093070;
+  font-weight: 700;
+}
+
+.ranking-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.ranking-desc {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 4px;
+}
+
+/* Estrelas */
+.avaliacao-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.avaliacao-container i {
+  color: var(--pink2);
+  font-size: 1rem;
+}
+
+.avaliacao-container span {
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: 6px;
+}
+
+.selo-premium {
+  margin-left: 6px;
+  color: var(--pink2);
+  font-weight: 700;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .ranking-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ranking-foto {
+    width: 100px;
+    height: 100px;
+  }
+}
+.header-ranking .logo-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* empurra o botão para a direita */
+.btn-voltar {
+  margin-left: auto;  /* isto empurra o botão para o extremo direito */
+  background: linear-gradient(180deg, #ededed, #cfcfcf);
+  color: #222;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+  transition: all .15s ease;
+}
+
+.btn-voltar i {
+  margin-right: 6px;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-1px);
+}

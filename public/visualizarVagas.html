@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>WWSafe</title>
+
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="stylesheet" href="assets/css/vagas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo WWSafe">
+  </div>
+
+  <div class="header-actions">
+    <button class="btn-voltar" onclick="window.location.href='homepage.html'">
+       Voltar
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <h2 class="section-title">Vagas Disponíveis</h2>
+
+  <p class="subtitulo">
+    Veja as vagas abertas em empresas comprometidas com a inclusão
+  </p>
+
+  <div class="filtros">
+    <input type="text" id="buscaTopo" placeholder="Buscar vaga...">
+
+    <select id="filtroContrato">
+      <option value="">Tipo de contrato</option>
+      <option value="clt">CLT</option>
+      <option value="pj">Pessoa Jurídica</option>
+      <option value="temporary">Temporário</option>
+    </select>
+
+    <button id="btnBuscarTopo" class="btn btn-pink">
+      Buscar
+    </button>
+  </div>
+
+  <div id="listaVagas" class="cards"></div>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

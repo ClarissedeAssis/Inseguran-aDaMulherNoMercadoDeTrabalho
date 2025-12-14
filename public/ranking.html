@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WW SAFE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap Icons para as estrelas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/ranking.css">
+</head>
+<body>
+
+<!-- HEADER PADRÃO -->
+<header class="header-ranking">
+  <div class="logo-area">
+    <img src="assets/images/logo.png" alt="WW Safe Logo">
+    <button class="btn-voltar" onclick="voltarHome()">
+Voltar
+    </button>
+  </div>
+</header>
+
+<main class="container">
+  <div class="buscar-container">
+    <input type="text" id="buscar" placeholder="Buscar empresa por nome, CNPJ ou setor...">
+  </div>
+
+  <div id="ranking-lista" class="ranking-lista">
+    <!-- Cards das empresas serão inseridos aqui pelo JS -->
+  </div>
+</main>
+
+<script src="assets/js/ranking.js"></script>
+</body>
+</html>

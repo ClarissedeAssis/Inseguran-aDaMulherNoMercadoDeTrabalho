@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Usuária </title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="card" role="region" aria-label="Login da usuária">
+    <div class="card-header">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="WWSafe Logo" />
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="page-title">
+        <h1>Acesso da Usuária </h1>
+      </div>
+
+      <form id="formLoginUsuarioEmpresa">
+        <div class="form-group">
+          <label for="nomeUsuario">Nome de Usuária:</label>
+          <input type="text" id="nomeUsuario" placeholder="Digite seu nome de usuário" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Chave de acesso:</label>
+          <input type="password" id="senha" placeholder="Digite sua chave de acesso" required>
+        </div>
+
+        <div class="form-actions">
+           <button type="button" class="btn btn-voltar" onclick="window.location.href='inicio.html'">
+            Voltar
+          </button>
+          <button type="submit" class="btn btn-cadastrar">Entrar</button>
+         
+        </div>
+      </form>
+
+      <p>Ainda não possui usuário? <a href="cadastroUsuario.html">Cadastrar</a></p>
+    </div>
+  </div>
+
+  <script src="assets/js/loginUsuario.js"></script>
+</body>
+</html>

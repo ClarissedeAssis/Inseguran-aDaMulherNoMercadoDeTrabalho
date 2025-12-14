@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>WWSafe - Currículo</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="card curriculo-card">
+
+  <!-- HEADER CORRETO -->
+  <div class="card-header">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo WWSafe">
+    </div>
+
+  </div>
+
+  <!-- CORPO -->
+  <div class="card-body">
+
+    <div class="page-title">
+      <h1>Currículo</h1>
+      <p>Preencha seu currículo e envie para a vaga</p>
+    </div>
+
+    <div class="curriculo-container">
+
+      <!-- FORMULÁRIO -->
+      <form id="formCurriculo" class="form-curriculo">
+
+        <div class="field">
+          <label>Nome</label>
+          <input type="text" id="nome">
+        </div>
+
+        <div class="field">
+          <label>E-mail</label>
+          <input type="email" id="email">
+        </div>
+
+        <div class="field">
+          <label>Contato</label>
+          <input type="text" id="contato">
+        </div>
+
+        <div class="field">
+          <label>Área de atuação</label>
+          <select id="areaAtuacao">
+            <option value="">Selecionar área</option>
+            <option>Administrativo</option>
+            <option>Jurídico</option>
+            <option>Tecnologia</option>
+            <option>RH</option>
+            <option>Financeiro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Formação</label>
+          <textarea id="formacao"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Habilidades</label>
+          <input type="text" id="habilidades">
+        </div>
+
+        <div class="field">
+          <label>Objetivo</label>
+          <textarea id="objetivo"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Experiência</label>
+          <textarea id="experiencia"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button
+            type="button"
+            class="btn btn-voltar"
+            onclick="window.location.href='visualizarVagas.html'">
+            Voltar
+          </button>
+
+          <button
+            type="button"
+            id="btnEnviar"
+            class="btn btn-cadastrar">
+            Enviar currículo
+          </button>
+        </div>
+
+      </form>
+
+      <!-- PREVIEW -->
+      <div class="preview-area">
+        <div id="preview" class="card preview-card"></div>
+
+        <button
+          class="btn btn-secondary"
+          onclick="window.location.href='meusCurriculos.html'">
+          Ver meus currículos
+        </button>
+
+    
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/curriculo.js"></script>
+</body>
+</html>

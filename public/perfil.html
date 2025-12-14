@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Perfil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/perfil.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="usuario-mini">
+      <img id="fotoSidebar" src="assets/images/avatar.png" alt="Foto do usuário">
+      <h3 id="nomeSidebar">Nome do Usuário</h3>
+      <p id="emailSidebar">email@email.com</p>
+    </div>
+
+    <button class="menu-item ativo" disabled>Perfil</button>
+
+    <!-- Botão de Meus Currículos -->
+    <a href="meusCurriculos.html" style="text-decoration:none;">
+      <button class="menu-item">Meus Currículos</button>
+    </a>
+
+    <button class="menu-item sair" id="btnLogout">Sair</button>
+
+      <a href="homepage.html" style="text-decoration:none;">
+    <button class="menu-item">Voltar</button>
+  </a>
+  </aside>
+
+  <main class="content">
+    <section class="card">
+
+      <h2>Dados do usuário</h2>
+
+      <div class="topo">
+        <label for="inputFoto">
+          <img id="fotoPerfil" src="assets/images/avatar.png" alt="Foto de perfil">
+        </label>
+        <input type="file" id="inputFoto" accept="image/*" hidden>
+
+        <div>
+          <h3 id="nomeTopo">Nome do Usuário</h3>
+          <p id="emailTopo">email@email.com</p>
+        </div>
+      </div>
+
+      <div class="grid">
+
+        <div>
+          <label>Nome</label>
+          <input type="text" id="nome">
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input type="email" id="email">
+        </div>
+
+        <div>
+          <label>Senha</label>
+          <input type="password" id="senha">
+        </div>
+
+        <div>
+          <label>Telefone</label>
+          <input type="text" id="telefone">
+        </div>
+
+        <div>
+          <label>Localização</label>
+          <input type="text" id="localizacao">
+        </div>
+
+      </div>
+
+      <button id="btnSalvar" class="btn-salvar">Salvar alterações</button>
+
+    </section>
+  </main>
+
+</div>
+
+<script src="assets/js/perfil.js"></script>
+</body>
+</html>

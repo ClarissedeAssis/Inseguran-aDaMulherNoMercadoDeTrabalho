@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Configurações</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <span class="back-arrow">⬅</span>
+    <div>Configurações</div>
+  </div>
+
+  <div class="profile-container" style="max-width:800px;margin:20px auto;">
+    <aside class="side-menu">
+      <img class="avatar" src="/mnt/data/8ad8bb04-4f8d-4766-91cc-78a71a47a90b.png" alt="Foto">
+      <h3 id="sideNome">Seu nome</h3>
+      <p id="sideEmail">seuemail@gmail.com</p>
+      <ul>
+        <li id="btnPerfil">Meu perfil</li>
+        <li id="btnConfig">Configurações</li>
+        <li id="btnNotificacoes">Notificações</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h2>Configurações</h2>
+
+      <div class="field">
+        <label for="selectTema">Tema</label>
+        <select id="selectTema">
+          <option value="claro">Claro</option>
+          <option value="escuro">Escuro</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="selectIdioma">Idioma</label>
+        <select id="selectIdioma">
+          <option value="portugues">Português</option>
+          <option value="ingles">Inglês</option>
+          <option value="espanhol">Espanhol</option>
+        </select>
+      </div>
+
+      <p style="color:#777;font-size:14px;">Notificações e outras configurações serão implementadas na Sprint 3.</p>
+    </main>
+  </div>
+
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/tema.js"></script>
+  <script type="module" src="js/idioma.js"></script>
+</body>
+</html>

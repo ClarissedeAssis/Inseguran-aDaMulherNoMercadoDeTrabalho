@@ -1,0 +1,202 @@
+:root {
+  --pink1: #ff6b81;
+  --pink2: #ff2d6f;
+  --light-gray: #f2f2f2;
+  --input-border: #d9d9d9;
+  --text: #222;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  color: var(--text);
+}
+
+/* HEADER PADRÃO (igual ao ranking) */
+.header-ranking {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: linear-gradient(90deg, var(--pink1), var(--pink2));
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-ranking .logo-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header-ranking img {
+  height: 110px;
+  width: auto;
+}
+
+.btn-voltar {
+  margin-left: auto;
+  background: linear-gradient(180deg, #ededed, #cfcfcf);
+  color: #222;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+  transition: all .15s ease;
+}
+
+.btn-voltar i {
+  margin-right: 6px;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-1px);
+}
+
+/* DETALHES DA EMPRESA */
+.empresa-detalhes {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.empresa-info-principal {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 900px;
+  width: 100%;
+}
+
+.empresa-foto {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.empresa-texto h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #093070;
+}
+
+.empresa-texto p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* AVALIAÇÕES */
+.avaliacoes-empresa {
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.avaliacoes-empresa h2 {
+  color: #093070;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.avaliacao-item {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.avaliacao-item p {
+  margin: 4px 0;
+}
+
+.avaliacao-item strong {
+  color: #093070;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .empresa-info-principal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .empresa-foto {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/* Container de avaliações */
+.avaliacoes-empresa {
+  margin-top: 40px;
+}
+
+.avaliacoes-empresa h2 {
+  font-size: 24px;
+  color: #093070;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Card de cada avaliação */
+.avaliacao-item {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.avaliacao-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Nome do usuário */
+.avaliacao-item p:first-child {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* Comentário */
+.avaliacao-item p:nth-child(2) {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Estrelas */
+.avaliacao-item p:nth-child(3) {
+  color: #ff2d6f;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Data ou outros detalhes */
+.avaliacao-item p:nth-child(4) {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .avaliacao-item {
+    padding: 14px 16px;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Cadastro de Usuário</title>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Cadastro de Usuários">
+    <div class="card-header">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="WWSafe Logo" />
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="page-title">
+        <h1>Cadastro de Usuária</h1>
+      </div>
+
+      <form id="formUsuario" novalidate>
+        <div class="form-grid">
+
+          <!-- Coluna 1 -->
+          <div class="coluna">
+            <div class="field">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" placeholder="Digite seu e-mail" required />
+            </div>
+
+           
+
+            <div class="field">
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" placeholder="Crie uma senha" required />
+            </div>
+          </div>
+
+          <!-- Coluna 2 -->
+          <div class="coluna">
+            <div class="field">
+              <label for="numeroCelular">Número de Celular:</label>
+              <input type="text" id="numeroCelular" placeholder="Digite seu número" required />
+            </div>
+
+            <div class="field">
+              <label for="localizacao">Localização:</label>
+              <input type="text" id="localizacao" placeholder="Exemplo: Brasil" required />
+            </div>
+             <div class="field">
+              <label for="confirmarSenha">Confirmar Senha:</label>
+              <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required />
+            </div>
+          </div>
+          
+
+          <!-- Coluna 3 -->
+          <div class="coluna">
+            <div class="field">
+              <label for="fotoPerfil">Foto de Perfil:</label>
+              <div class="custom-file-upload" id="uploadContainer">
+                <input type="file" id="fotoPerfil" accept="image/*" />
+                <i class="bi bi-upload" id="uploadIcon"></i>
+                <span id="fileLabel">Clique ou arraste a imagem</span>
+                <img id="previewFoto" src="" alt="Prévia da foto" class="preview-logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-voltar" onclick="history.back()">Voltar</button>
+          <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/cadastrarUsuario.js"></script>
+</body>
+</html>
